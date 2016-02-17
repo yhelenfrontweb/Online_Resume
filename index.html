@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- This tells the browser how to read the document. -->
+    <meta charset="utf-8">
+    
+    <!-- Tells the browser what the title of this page should be. -->
+    <title>Helen's Resume</title>
+    
+    <!-- Load the page styles. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jQuery.js"></script>
+    
+    <!-- More on helper.js in the class -->
+    <script src="js/helper.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<div id="main" class="container-fluid">
+    <header>
+        <div class="row">
+            <div class="col-lg-12 bg-info">
+                <ul id="topContacts" class="flex-box">
+                </ul>
+            </div>
+            </div>
+            </header> <!-- Top contacts header-->
+            
+         <div class="container">  
+         
+         <header>
+            <div class="row">
+             <div id="header" class="center-content clearfix col-lg-12"></div>
+             </div>
+           </header>  <!--Bio header-->
+            <section >
+            <div class="row">
+            <div id="workExperience" class="gray col-lg-12">
+                <h2>Work Experience</h2>
+            </div>
+            </div>
+        </section>
+        <!--Work section-->
+        <section >
+        <div class="row">
+                <div id="projects" class="col-lg-12">
+                    <h2>Projects</h2>
+                </div>
+			</div>
+		</section>
+        <!--Projects section-->
+        <section >
+        <div class="row">
+            <div id="education" class="gray col-lg-12">
+                <h2>Education</h2>
+            </div>
+            </div>
+        </section>
+        <!--Education section-->
+        <section >
+            <div class="row">
+                <div  id="chart" class="col-xs-12 skill-chart">
+                    <h2>Skills</h2>
+                </div>
+            </div>
+        </section>
+        <!--Skills chart section-->
+    </div>
+    <section >
+        <div class="row">
+            <div id="mapDiv" class="col-lg-12">
+                <h2>Where I've Lived and Worked</h2>
+            </div>
+        </div>
+    </section>
+    <!--Map section-->
+    <footer>
+        <div class="row ">
+            <div id="letsConnect" class="col-lg-12 ">
+                <h2 class="center-text">Let's Connect</h2>
+                <div class="col-lg-12">
+                    <hr>
+                    <ul id="footerContacts" class="flex-box">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="js/d3.min.js"></script>
+<script src="js/resumeBuilder.js"></script>
+
+  <script type="text/javascript">
+  
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('topContacts').style.display= 'none';
+    }
+    if(document.getElementsByTagName('h1').length === 0) {
+      document.getElementById('header').style.backgroundColor= 'none';
+    }
+    if(document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('workExperience').style.backgroundColor= '#000000';
+    }
+    if(document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.backgroundColor= '#000000';
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.backgroundColor= 'none';
+    }
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('letsConnect').style.backgroundColor= 'none';
+    }
+    if(document.getElementById('map') === null) {
+      document.getElementById('mapDiv').style.backgroundColor= 'black';
+    }
+	
+  </script>
+</body>
+</html>
